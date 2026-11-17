@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Чертоги Разума — Сейф и Детективная доска</title>
+    <!-- Tailwind (утилиты, используются только в HTML) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CryptoJS AES-256 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <!-- Собственные стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ==================== ФАСАД: КАЛЬКУЛЯТОР ==================== -->
+    <div id="calculator-facade">
+        <div class="calc-box neon-border">
+            <div class="calc-topbar">
+                <span>CALC // SYS.v4.2</span>
+                <span class="status" id="calc-status">STD MODE</span>
+            </div>
+            <!-- Экран -->
+            <div class="calc-screen">
+                <div class="calc-history" id="calc-history"></div>
+                <div class="calc-display" id="calc-display">0</div>
+            </div>
+            <!-- Кнопки (data-calc вместо inline onclick) -->
+            <div class="calc-grid">
+                <button data-calc="clear"     class="calc-btn-clear">C</button>
+                <button data-calc="backspace"  class="calc-btn-bs">⌫</button>
+                <button data-calc="/"          class="calc-btn-op">÷</button>
+                <button data-calc="7" class="calc-btn-num">7</button>
+                <button data-calc="8" class="calc-btn-num">8</button>
+                <button data-calc="9" class="calc-btn-num">9</button>
+                <button data-calc="*" class="calc-btn-op">×</button>
+                <button data-calc="4" class="calc-btn-num">4</button>
+                <button data-calc="5" class="calc-btn-num">5</button>
+                <button data-calc="6" class="calc-btn-num">6</button>
+                <button data-calc="-" class="calc-btn-op">−</button>
